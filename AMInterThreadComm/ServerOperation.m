@@ -50,7 +50,7 @@ CFDataRef callback(CFMessagePortRef local, SInt32 msgid, CFDataRef data, void *i
     // prepare a port
     CFStringRef port_name = CFSTR("com.polyorb.app.myapp");
     
-    // create our answer port - &callback is the name of the function that will be called when we get a "request" from a client.
+    // create our answer port - callback is the name of the function that will be called when we get a "request" from a client.
     CFMessagePortRef serverPort = CFMessagePortCreateLocal(kCFAllocatorDefault, port_name, &callback, NULL, NULL);
     
     // launch a separate thread via which we answer requests...

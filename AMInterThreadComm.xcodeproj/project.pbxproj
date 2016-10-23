@@ -14,6 +14,7 @@
 		7D78DD4B1DBCFBF300FB4E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D78DD4A1DBCFBF300FB4E8A /* Assets.xcassets */; };
 		7D78DD4E1DBCFBF300FB4E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D78DD4C1DBCFBF300FB4E8A /* LaunchScreen.storyboard */; };
 		7D78DD571DBCFC3900FB4E8A /* ServerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D78DD561DBCFC3900FB4E8A /* ServerOperation.m */; };
+		8A153B7A1DBD297A00F83A65 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8A153B791DBD297A00F83A65 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7D78DD4F1DBCFBF300FB4E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D78DD551DBCFC3900FB4E8A /* ServerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOperation.h; sourceTree = "<group>"; };
 		7D78DD561DBCFC3900FB4E8A /* ServerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOperation.m; sourceTree = "<group>"; };
+		8A153B791DBD297A00F83A65 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 		7D78DD321DBCFBF300FB4E8A = {
 			isa = PBXGroup;
 			children = (
+				8A153B791DBD297A00F83A65 /* README.md */,
 				7D78DD3D1DBCFBF300FB4E8A /* AMInterThreadComm */,
 				7D78DD3C1DBCFBF300FB4E8A /* Products */,
 			);
@@ -157,6 +160,7 @@
 			files = (
 				7D78DD571DBCFC3900FB4E8A /* ServerOperation.m in Sources */,
 				7D78DD461DBCFBF300FB4E8A /* ViewController.m in Sources */,
+				8A153B7A1DBD297A00F83A65 /* README.md in Sources */,
 				7D78DD431DBCFBF300FB4E8A /* AppDelegate.m in Sources */,
 				7D78DD401DBCFBF300FB4E8A /* main.m in Sources */,
 			);
@@ -311,6 +315,7 @@
 				7D78DD541DBCFBF300FB4E8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
