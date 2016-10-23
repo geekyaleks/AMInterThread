@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ServerOperation.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) NSOperationQueue *queue;
+@property (nonatomic, strong) ServerOperation *server;
 
 @end
 
@@ -16,7 +20,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    // create operations queue, and launch a Server...
+    self.queue = [[NSOperationQueue alloc] init];
+    [self.queue setName:@"my_test_queue"];
+    self.server = [[ServerOperation alloc] init];
+    [self.queue addOperation:self.server];
+    
     return YES;
 }
 

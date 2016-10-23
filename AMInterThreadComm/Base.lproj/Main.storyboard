@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciL-90-VSK">
+                                <rect key="frame" x="20" y="67" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.73480902777777779" green="0.71999782986111116" blue="0.75580512152777779" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="Viv-nO-vaM"/>
+                                </constraints>
+                                <state key="normal" title="Send Text to Server"/>
+                                <connections>
+                                    <action selector="sendCommandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ga3-Ku-IqV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HU7-k0-FWw">
+                                <rect key="frame" x="232" y="67" width="348" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Communicate to Server Thread" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILj-Py-WT5">
+                                <rect key="frame" x="160" y="20" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Mco-nm-VVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="618-yz-GWR">
+                                <rect key="frame" x="20" y="129" width="560" height="395"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-Or-etA">
+                                <rect key="frame" x="506" y="550" width="74" height="30"/>
+                                <color key="backgroundColor" red="0.73480902780000001" green="0.71999782990000005" blue="0.75580512150000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="DYG-l3-f7a"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearServerResponsePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEg-Hg-utE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HU7-k0-FWw" firstAttribute="leading" secondItem="ciL-90-VSK" secondAttribute="trailing" constant="36" id="35b-hu-GnF"/>
+                            <constraint firstItem="ciL-90-VSK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="6n1-8J-1dl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0IM-Or-etA" secondAttribute="trailing" id="6pz-Ai-KrY"/>
+                            <constraint firstItem="ILj-Py-WT5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ayv-6i-Fxd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="618-yz-GWR" secondAttribute="leading" id="BDT-GR-yiY"/>
+                            <constraint firstItem="618-yz-GWR" firstAttribute="top" secondItem="ciL-90-VSK" secondAttribute="bottom" constant="32" id="I3A-kO-hX0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0IM-Or-etA" secondAttribute="bottom" constant="20" id="Ocd-M4-8dP"/>
+                            <constraint firstItem="ILj-Py-WT5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yu5-84-cPD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="618-yz-GWR" secondAttribute="trailing" id="gUr-Nj-Ruk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="618-yz-GWR" secondAttribute="bottom" constant="76" id="m87-Ei-dBl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HU7-k0-FWw" secondAttribute="trailing" id="tDW-le-iG5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ciL-90-VSK" secondAttribute="leading" id="vxG-eH-ZlT"/>
+                            <constraint firstItem="HU7-k0-FWw" firstAttribute="top" secondItem="ciL-90-VSK" secondAttribute="top" id="x6Y-De-Evt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commandTextField" destination="HU7-k0-FWw" id="RWb-2B-u9E"/>
+                        <outlet property="serverResponseTextView" destination="618-yz-GWR" id="1VF-XB-MFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="355"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		7D78DD491DBCFBF300FB4E8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D78DD471DBCFBF300FB4E8A /* Main.storyboard */; };
 		7D78DD4B1DBCFBF300FB4E8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D78DD4A1DBCFBF300FB4E8A /* Assets.xcassets */; };
 		7D78DD4E1DBCFBF300FB4E8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D78DD4C1DBCFBF300FB4E8A /* LaunchScreen.storyboard */; };
+		7D78DD571DBCFC3900FB4E8A /* ServerOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D78DD561DBCFC3900FB4E8A /* ServerOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		7D78DD4A1DBCFBF300FB4E8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D78DD4D1DBCFBF300FB4E8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D78DD4F1DBCFBF300FB4E8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D78DD551DBCFC3900FB4E8A /* ServerOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerOperation.h; sourceTree = "<group>"; };
+		7D78DD561DBCFC3900FB4E8A /* ServerOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				7D78DD4C1DBCFBF300FB4E8A /* LaunchScreen.storyboard */,
 				7D78DD4F1DBCFBF300FB4E8A /* Info.plist */,
 				7D78DD3E1DBCFBF300FB4E8A /* Supporting Files */,
+				7D78DD551DBCFC3900FB4E8A /* ServerOperation.h */,
+				7D78DD561DBCFC3900FB4E8A /* ServerOperation.m */,
 			);
 			path = AMInterThreadComm;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				TargetAttributes = {
 					7D78DD3A1DBCFBF300FB4E8A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = BSLR42DR62;
 					};
 				};
 			};
@@ -149,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D78DD571DBCFC3900FB4E8A /* ServerOperation.m in Sources */,
 				7D78DD461DBCFBF300FB4E8A /* ViewController.m in Sources */,
 				7D78DD431DBCFBF300FB4E8A /* AppDelegate.m in Sources */,
 				7D78DD401DBCFBF300FB4E8A /* main.m in Sources */,
@@ -265,9 +272,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AMInterThreadComm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nothing.AMInterThreadComm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polyorb.AMInterThreadComm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,9 +284,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AMInterThreadComm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nothing.AMInterThreadComm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polyorb.AMInterThreadComm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
